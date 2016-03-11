@@ -1,3 +1,236 @@
-body {
-  background: white;
+//Variables
+@import './vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
+$yardless-primary: #FF6D37;
+$yardless-light-grey: #D7D7D7;
+$yardless-primary-darker: #E35E2D;
+
+
+html {
+  overflow: scroll;
 }
+html,
+body {
+  background: $white;
+}
+
+.header {
+  color: $yardless-primary;
+  position: relative;
+
+  a {
+    color: $yardless-primary;
+  }
+
+  .logo {
+    float: left;
+
+    img {
+      margin: 20px 0;
+    }
+  }
+
+  .cart {
+    float: right;
+
+    img {
+      margin: 20px 4px 20px 0;
+    }
+
+    a {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.hero-banner {
+  background: url('/assets/img/img-hero-1.png') center 0 no-repeat;
+  height: 460px;
+
+  .banner-content {
+    color: $white;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .banner-title,
+  .banner-copy {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.53);
+  }
+
+  .banner-title {
+    font-size: 42px;
+    margin-top: 180px;
+  }
+
+  .banner-copy {
+    font-size: 22px;
+  }
+
+  .search-entry {
+    color: $yardless-primary;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px;
+    vertical-align: top;
+    width: 300px;
+  }
+
+  .search-submit {
+    background: $yardless-primary url('/assets/icons/icon-search.png') no-repeat center center;
+    border: 0;
+    display: inline-block;
+    height: 43px;
+    margin-left: -4px;
+    padding: 9px;
+    width: 40px;
+
+    &:hover {
+      background-color: $yardless-primary-darker
+    }
+  }
+}
+
+.menu-wrapper {
+  border: 0;
+  border-right: 1px solid $yardless-light-grey;
+  border-bottom: 1px solid $yardless-light-grey;
+  border-left: 1px solid $yardless-light-grey;
+  margin-bottom: 24px;
+}
+
+.main-nav {
+  color: grey;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  ul {
+    margin: 0px;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 16px 24px;
+  }
+
+  a {
+    color: grey;
+    padding-bottom: 2px;
+    text-decoration: none;
+
+    &:hover {
+      color: $yardless-primary;
+      border-bottom: 2px solid $yardless-primary;
+    }
+  }
+}
+
+.product-card-row {
+  margin-bottom: 26px;
+}
+
+.product-cards {
+  .card {
+    border: 1px solid $yardless-light-grey;
+    position: relative;
+
+    p {
+      font-size: 14px;
+    }
+
+    .product-card-image {
+      width: 100%;
+    }
+
+    .card-details {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .product-price {
+      color: $yardless-primary;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .product-card-cart-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    a {
+      display: block;
+      background: $yardless-primary;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+
+      img {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background: $yardless-primary-darker;
+      }
+    }
+  }
+}
+
+
+//Media Queries
+
+@media only screen and (min-width:320px) {
+  .hero-banner .banner-title {
+    margin-top: 100px;
+  }
+
+  .hero-banner .search-entry {
+    width: 220px;
+  }
+
+  .main-nav ul {
+    padding: 0;
+  }
+
+  .main-nav li {
+    margin: 8px;
+  }
+
+  .product-col {
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (min-width:480px) {
+  .hero-banner .search-entry {
+    width: 300px;
+  }
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+
+}
+
+
