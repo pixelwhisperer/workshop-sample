@@ -6362,3 +6362,7 @@ body {
 @media only screen and (min-width: 480px) {
   .hero-banner .search-entry {
     width: 300px; } }
+
+@media only screen and (min-width: 768px) {
+  .hero-banner .banner-title {
+    margin-top: 180px; } }
